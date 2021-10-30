@@ -4,6 +4,7 @@ from mediawiki import MediaWiki
 from imdbpie import Imdb
 
 def choc():
+    """"pulls data from chocolate cake wikipedia page"""
     wikipedia = MediaWiki()
     choc_cake = wikipedia.page("Chocolate_cake") # cake must be lowercase
     print(choc_cake.title)
@@ -11,7 +12,7 @@ def choc():
 
 
 def mov():
-    
+    """"pulls data from IMDB page"""
     imdb = Imdb()
     print(imdb.search_for_title("Venom")[0])
     reviews = imdb.get_title_user_reviews("tt1270797") # string from http
