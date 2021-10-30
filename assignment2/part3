@@ -1,0 +1,21 @@
+Project Overview
+
+I used the pymediawiki package to get data from a wikipedia page called Chocolate Cake. I also used IMBD Movie Reviews just to test out how the data is pulled but I did not do anything with it in part 2. For part 2, I used the chocolate cake webpage from wikipedia by turning it into a text file first and then writing a function to find the most frequently used words in in the article. I primarily wanted to learn how to write a function that read straight from the wikipedia page but I don't think thats possible so I formatted the wikipedia page data into a txt file.
+
+Implementation
+
+Originally I had planned to use the data from the IMBD source, but I choose the Wikipedia source because it was a cleaner txt file. I choose to find the most frquent words because I knew the result was going to be something like 'chocolate' or 'cake' that way I could make sure that the code was working. I learned how to use a module called re, using re.findall which can be used to match characters given a pattern and a string then returns the matching stings as a list. I found the boundary example from an outside source because I could not understand it from the python documentation. The documentation only specified using boundary with a character range like [a-z] but not a number range. I found that when I just used the character range in the boundary I got only frequent letters not words so I used both to get an entire list of most frquent words.
+
+Unfortunately, using re.findall returns all matches so this includes words that are less frequent. I could not figure out a way to return only matches that had a value of 10+. I tried using a for loop like from when we did analyze_book but I kept getting a typeerror. 
+
+Results
+
+When I was writting the function to find the most frequent words in the chocolate cake article, I was pleased to find that the most frequent words returned were 'chocolate' and 'cake. My function didn't really do anything that interesting, it just returned a list of the most frquent words.
+
+Reflection
+
+I think the entire process went well. I originally had some trouble figuring out how to write the data pulled from the wikipedia source. There are not a lot of sources of people explaning how that is done they just magically already have the txt file. After I finished turning the data into a txt file I also had strange characters on it that I had to go through and clean. I think I could improve by maybe choosing something a little harder. 
+
+I had initially wanted to use the IMDB data to find the most frquent words among the reviews. Then I was going to make a counter that counted positive and negative words, and then based on that I could make a review "meter". For example more positive words means a higher percentage (kind of like rotten tomatoes.) I will use the re module going forward because I think it would help in a lot of other places when analyzing data or a regulary dictionary/list.
+
+
